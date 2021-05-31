@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KBOX ADMIN</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="../../AdminLTE/bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../AdminLTE/bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../AdminLTE/bower_components/Ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="../../AdminLTE/bower_components/datatables.net-bs/css/dataTables.bootstrap.css">
+    <link rel="stylesheet" href="../../AdminLTE/bower_components/jvectormap/jquery-jvectormap.css">
+    <link rel="stylesheet" href="../../AdminLTE/bower_components/select2/dist/css/select2.min.css">
+    <link rel="stylesheet" href="../../AdminLTE/bower_components/bootstrap-daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="../../AdminLTE/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="../../AdminLTE/plugins/iCheck/all.css">
+    <link rel="stylesheet" href="../../AdminLTE/dist/css/AdminLTE.css">
+    <link rel="stylesheet" href="../../AdminLTE/dist/css/skins/_all-skins.css">
+    <link rel="stylesheet" href="../resources/css/mcc-admin.css">
+</head>
+<body class="skin-black-light sidebar-mini fixed">
+    <div class="wrapper">
+
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="../view/KDM-003-0001.html" target="_self" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class="logo-mini"><b>K</b></span>
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg"><b>KBOX</b> Admin</span>
+            </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top">
+
+
+                <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="../view/KDM-003-0001.html" target="_self">게시물관리</a></li>
+                        <li><a href="../view/KDM-004-0001.html" target="_self">주문관리</a></li>
+                        <li><a href="../view/KDM-005-0001.html" target="_self">상품관리</a></li>
+                        <li><a href="../view/KDM-012-0001.html" target="_self">연예인관리</a></li>
+                        <li><a href="../view/KDM-007-0001.html" target="_self">회원 관리</a></li>
+                        <li><a href="../view/KDM-008-0001.html" target="_self">통계</a></li>
+                        <li><a href="../view/KDM-009-0001.html" target="_self">고객센터</a></li>
+                        <li><a href="../view/KDM-010-0007.html" target="_self">쇼핑몰설정</a></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+                <!-- Navbar Right Menu -->
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <!-- User Account: style can be found in dropdown.less -->
+                        <li class="dropdown user user-menu">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span class="hidden-xs">안녕하세요.</span> <u>홍길동</u><span class="hidden-xs">님</span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+                                <li class="user-body">
+                                    <p class="text-center">최근 로그인 : 2018.09.09 12:36:12</p>
+                                </li>
+                                <!-- Menu Footer-->
+                                <li class="user-footer">
+                                    <div class="pull-left">
+                                        <a href="#none" target="_self" class="btn btn-default btn-flat">PW 재설정</a>
+                                    </div>
+                                    <div class="pull-right">
+                                        <button type="button" href="#none" target="_self" class="btn btn-default btn-flat">로그아웃</button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-custom-menu -->
+            </nav>
+        </header>
+        
+        <!--웹화면 용-->
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                <!-- sidebar menu: : style can be found in sidebar.less -->
+                <ul class="sidebar-menu" data-widget="tree" aria-labelledby="depth1_name">
+                    <li id="depth1_name" class="header txt_center">게시물관리</li>
+                    <li class="active treeview">
+                        <a href="#none">
+                            <span>POST관리</span>
+                            <span class="pull-right-container">
+                              <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li class="active"><a href="../view/KDM-003-0001.html" target="_self">POST목록</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#none">
+                            <span>카파라치관리</span>
+                            <span class="pull-right-container">
+                              <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="../view/KDM-003-0003.html" target="_self">카파라치목록</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#none">
+                            <span>Kay STORY관리</span>
+                            <span class="pull-right-container">
+                              <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="../view/KDM-003-0005.html" target="_self">Kay STORY목록</a></li>
+                            <li><a href="../view/KDM-003-0007.html" target="_self">Kay STORY등록</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#none">
+                            <span>이벤트관리</span>
+                            <span class="pull-right-container">
+                              <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="../view/KDM-003-0009.html" target="_self">이벤트목록</a></li>
+                            <li><a href="../view/KDM-003-0011.html" target="_self">이벤트등록</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+        
+        <!--모바일화면 용-->
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar sidebar_none">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                <!-- sidebar menu: : style can be found in sidebar.less -->
+                <ul class="sidebar-menu" data-widget="tree" aria-labelledby="depth1_name">
+                    <li id="depth1_name_1" class="active treeview">
+                        <a href="#none" class="lnb_nav_side default">
+                            <span>게시물관리</span>
+                            <span class="pull-right-container">
+                              <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="active treeview treeview-menu">
+                           <ul class="active treeview treeview-menu padding_08">
+                                <a href="#none" class="padding_06 ft_size lnb_ex">
+                                    <span>POST관리</span>
+                                    <span class="pull-right-container">
+                                      <i class="fa fa-angle-left pull-right"></i>
+                                    </span>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li class="active">
+                                        <a href="../view/KDM-003-0001.html" target="_self">- POST목록</a>
+                                    </li>
+                                </ul><!--POST관리-->
+                            </ul>
+                            <ul class="treeview treeview-menu padding_08">
+                                <a href="#none" class="padding_06 ft_size lnb_ex">
+                                    <span>카파라치관리</span>
+                                    <span class="pull-right-container">
+                                      <i class="fa fa-angle-left pull-right"></i>
+                                    </span>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li>
+                                        <a href="../view/KDM-003-0003.html" target="_self">- 카파라치목록</a>
+                                    </li>
+                                </ul>
+                            </ul><!--카파라치관리-->
+                            <ul class="treeview treeview-menu padding_08">
+                                <a href="#none" class="padding_06 ft_size lnb_ex">
+                                    <span>Kay STORY관리</span>
+                                    <span class="pull-right-container">
+                                      <i class="fa fa-angle-left pull-right"></i>
+                                    </span>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li>
+                                        <a href="../view/KDM-003-0005.html" target="_self">- Kay STORY목록</a>
+                                    </li>
+                                    <li>
+                                        <a href="../view/KDM-003-0007.html" target="_self">- Kay STORY등록</a>
+                                    </li>
+                                </ul>
+                            </ul><!--Kay STORY-->
+                            <ul class="treeview treeview-menu padding_08">
+                                <a href="#none" class="padding_06 ft_size lnb_ex">
+                                    <span>이벤트관리</span>
+                                    <span class="pull-right-container">
+                                      <i class="fa fa-angle-left pull-right"></i>
+                                    </span>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li>
+                                        <a href="../view/KDM-003-0009.html" target="_self">- 이벤트목록</a>
+                                    </li>
+                                    <li>
+                                        <a href="../view/KDM-003-0011.html" target="_self">- 이벤트등록</a>
+                                    </li>
+                                </ul>
+                            </ul><!--댓글목록-->
+                        </ul>
+                    </li><!--***************post 첫li*********************-->
+                    <li id="depth1_name_2" class="treeview">
+                        <a href="#none" class="lnb_nav_side">
+                            <span>주문관리</span>
+                            <span class="pull-right-container">
+                              <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="active treeview treeview-menu">
+                           <ul class="treeview treeview-menu padding_08">
+                                <a href="#none" class="padding_06 ft_size lnb_ex">
+                                    <span>주문관리</span>
+                                    <span class="pull-right-container">
+                                      <i class="fa fa-angle-left pull-right"></i>
+                                    </span>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li>
+                                        <a href="../view/KDM-004-0001.html" target="_self">- 결제완료</a>
+                                    </li>
+                                    <li>
+                                        <a href="../view/KDM-004-0005.html" target="_self">- 배송준비</a>
+                                    </li>
+                                    <li>
+                                        <a href="../view/KDM-004-0007.html" target="_self">- 배송중</a>
+                                    </li>
+                                    <li>
+                                        <a href="../view/KDM-004-0008.html" target="_self">- 배송완료</a>
+                                    </li>
+                                    <li>
+                                        <a href="../view/KDM-004-0009.html" target="_self">- 전체주문</a>
+                                    </li>
+                                </ul><!--안쪽 주문관리-->
+                            </ul>
+                            <ul class="treeview treeview-menu padding_08">
+                                <a href="#none" class="padding_06 ft_size lnb_ex">
+                                    <span>취소관리</span>
+                                    <span class="pull-right-container">
+                                      <i class="fa fa-angle-left pull-right"></i>
+                                    </span>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li>
+                                        <a href="../view/KDM-004-0010.html" target="_self">- 주문취소</a>
+                                    </li>
+                                </ul>
+                            </ul><!--취소관리-->
+                        </ul><!--주문관리-->
+                    </li><!--***************주문관리 첫li*********************-->
+                    <li id="depth1_name_3" class="treeview">
+                        <a href="#none" class="lnb_nav_side default">
+                            <span>상품관리</span>
+                            <span class="pull-right-container">
+                              <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="active treeview-menu">
+                            <li>
+                                <a href="../view/KDM-005-0001.html" target="_self">- 상품목록</a>
+                            </li>
+                            <li>
+                                <a href="../view/KDM-005-0002.html" target="_self">- 상품등록</a>
+                            </li>
+                        </ul>
+                    </li><!--***************상품관리 첫li*********************-->
+                    <li id="depth1_name_4" class="treeview">
+                        <a href="#none" class="lnb_nav_side">
+                            <span>연예인관리</span>
+                            <span class="pull-right-container">
+                              <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="active treeview treeview-menu">
+                           <ul class="treeview treeview-menu padding_08">
+                                <a href="#none" class="padding_06 ft_size lnb_ex">
+                                    <span>연예인관리</span>
+                                    <span class="pull-right-container">
+                                      <i class="fa fa-angle-left pull-right"></i>
+                                    </span>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li>
+                                        <a href="../view/KDM-012-0001.html" target="_self">- 연예인목록</a>
+                                    </li>
+                                    <li>
+                                        <a href="../view/KDM-012-0007.html" target="_self">- 그룹관리</a>
+                                    </li>
+                                    <li>
+                                        <a href="../view/KDM-012-0009.html" target="_self">- VOTE정산</a>
+                                    </li>
+                                </ul><!--안쪽 주문관리-->
+                            </ul>
+                            <ul class="treeview treeview-menu padding_08">
+                                <a href="#none" class="padding_06 ft_size lnb_ex">
+                                    <span>명예의전당</span>
+                                    <span class="pull-right-container">
+                                      <i class="fa fa-angle-left pull-right"></i>
+                                    </span>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li>
+                                        <a href="../view/KDM-012-0004.html" target="_self">- 명예의전당</a>
+                                    </li>
+                                </ul>
+                            </ul>
+                        </ul>
+                    </li><!--***************연예인관리 첫li*********************-->
+                    <li id="depth1_name_5" class="treeview">
+                        <a href="#none" class="lnb_nav_side">
+                            <span>회원관리</span>
+                            <span class="pull-right-container">
+                              <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="../view/KDM-007-0001.html" target="_self">- 가입현황</a>
+                            </li>
+                            <li>
+                                <a href="../view/KDM-007-0002.html" target="_self">- 회원조회</a>
+                            </li>
+                            <li>
+                                <a href="../view/KDM-007-0003.html" target="_self">- 열매내역</a>
+                            </li>
+                            <li>
+                                <a href="../view/KDM-007-0004.html" target="_self">- 블랙리스트</a>
+                            </li>
+                        </ul>
+                    </li><!--***************회원관리 첫li*********************-->
+                    <li id="depth1_name_6" class="treeview">
+                        <a href="#none" class="lnb_nav_side">
+                            <span>통계</span>
+                            <span class="pull-right-container">
+                              <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="active treeview treeview-menu">
+                           <ul class="treeview treeview-menu padding_08">
+                            <a href="#none" class="padding_06 ft_size lnb_ex">
+                                <span>매출통계</span>
+                                <span class="pull-right-container">
+                                  <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li>
+                                    <a href="../view/KDM-008-0001.html" target="_self">- 일별매출</a>
+                                </li>
+                                <li>
+                                    <a href="../view/KDM-008-0002.html" target="_self">- 월별매출</a>
+                                </li>
+                                <li>
+                                    <a href="../view/KDM-008-0003.html" target="_self">- 상품별매출</a>
+                                </li>
+                            </ul>
+                            </ul>
+                            <ul class="treeview treeview-menu padding_08">
+                                <a href="#none" class="padding_06 ft_size lnb_ex">
+                                    <span>열매통계</span>
+                                    <span class="pull-right-container">
+                                      <i class="fa fa-angle-left pull-right"></i>
+                                    </span>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li>
+                                        <a href="../view/KDM-008-0006.html" target="_self">- 열매통계</a>
+                                    </li>
+                                </ul>
+                            </ul>
+                        </ul>
+                    </li><!--***************통계 첫li*********************-->
+                    <li id="depth1_name_7" class="treeview">
+                        <a href="#none" class="lnb_nav_side">
+                            <span>고객센터</span>
+                            <span class="pull-right-container">
+                              <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="active treeview-menu">
+                            <li>
+                                <a href="../view/KDM-009-0001.html" target="_self">- 공지사항</a>
+                            </li>
+                            <li>
+                                <a href="../view/KDM-009-0005.html" target="_self">- 상품문의</a>
+                            </li>
+                        </ul>
+                    </li><!--***************고객센터 첫li*********************-->
+                    <li id="depth1_name_8" class="treeview">
+                        <a href="#none" class="lnb_nav_side default">
+                            <span>쇼핑몰설정</span>
+                            <span class="pull-right-container">
+                              <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="active treeview treeview-menu">
+                           <ul class="treeview treeview-menu padding_08">
+                                <a href="#none" class="padding_06 ft_size lnb_ex">
+                                    <span>배송관리</span>
+                                    <span class="pull-right-container">
+                                      <i class="fa fa-angle-left pull-right"></i>
+                                    </span>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li>
+                                        <a href="../view/KDM-010-0007.html" target="_self">- 국가별 배송비 관리</a>
+                                    </li>
+                                </ul><!--기본정보 관리-->
+                            </ul>
+                            <ul class="treeview treeview-menu padding_08">
+                                <a href="#none" class="padding_06 ft_size lnb_ex">
+                                    <span>열매관리</span>
+                                    <span class="pull-right-container">
+                                      <i class="fa fa-angle-left pull-right"></i>
+                                    </span>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li>
+                                        <a href="../view/KDM-010-0010.html" target="_self">- 열매가치 설정</a>
+                                    </li>
+                                </ul>
+                            </ul><!--열매관리-->
+                        </ul>
+                    </li><!--***************쇼핑몰설정 li*********************-->
+                </ul>
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <h1>
+                    POST목록
+                </h1>
+            </section>
+
+            <!-- Main content -->
+            <section class="content">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="box box-primary">
+
+                            <div class="box-header with-border search-box">
+
+                                <form class="form-inline col-lg-12">
+                                   <dl class="form-group search_daterange2">
+                                        <dd>
+                                            <div id="pick-daterange" class="input-group btn_daterg-custom">
+                                               <span class="span_style ft_size padding_02">등록일자</span>
+                                                <button type="button" class="btn btn-default btn_daterg">
+                                                    <span class="pull-left">
+                                                      <i class="fa fa-calendar"></i>기간 선택
+                                                    </span>
+                                                    <i class="fa fa-caret-down pull-right"></i>
+                                                </button>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl class="form-group search_user">
+                                        <span class="span_style ft_size">국가</span>
+                                        <dd class="dd_style">
+                                            <div class="input-group">
+                                                <select id="" class="form-control padding_04">
+                                                    <option>전체</option>
+                                                    <option>option 2</option>
+                                                    <option>option 3</option>
+                                                    <option>option 4</option>
+                                                    <option>option 5</option>
+                                                </select>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl class="form-group search_sortlist">
+                                        <span class="span_style ft_size">POST분류</span>
+                                        <dd class="dd_style">
+                                            <div class="input-group">
+                                                <div class="checks icheck-list table_style">
+                                                  <input type="checkbox" id="post_chk_01" name="all" class="minimal check_all_ab" checked> 
+                                                  <label for="post_chk_01">전체</label> 
+                                                </div>
+                                                <div class="checks icheck-list table_style">
+                                                  <input type="checkbox" id="post_chk_02" name="cb1" class="minimal check_ab" checked> 
+                                                  <label for="post_chk_02">상품후기</label> 
+                                                </div>
+                                                <div class="checks icheck-list table_style">
+                                                  <input type="checkbox" id="post_chk_03" name="cb2" class="minimal check_ab" checked> 
+                                                  <label for="post_chk_03">K-STORY후기</label> 
+                                                </div>
+                                                <div class="checks icheck-list table_style">
+                                                  <input type="checkbox" id="post_chk_04" name="cb3" class="minimal check_ab" checked> 
+                                                  <label for="post_chk_04">이벤트후기</label> 
+                                                </div>
+                                                <div class="checks icheck-list table_style">
+                                                  <input type="checkbox" id="post_chk_05" name="cb4" class="minimal check_ab" checked> 
+                                                  <label for="post_chk_05">일상</label> 
+                                                </div>
+                                            </div><!--체크박스-->
+                                        </dd>
+                                    </dl>
+                                    <dl class="form-group search_sortlist">
+                                       <span class="span_style ft_size">노출상태</span>
+                                        <dd class="dd_style">
+                                            <div class="input-group">
+                                                <div class="checks small icheck-list table_style">
+                                                  <input type="radio" id="post_list_01" name="sell_01" class="minimal" checked> 
+                                                  <label for="post_list_01">전체</label> 
+                                                </div>
+                                                <div class="checks small icheck-list table_style">
+                                                  <input type="radio" id="post_list_02" name="sell_01" class="minimal"> 
+                                                  <label for="post_list_02">노출</label> 
+                                                </div>
+                                                <div class="checks small icheck-list table_style">
+                                                  <input type="radio" id="post_list_03" name="sell_01" class="minimal"> 
+                                                  <label for="post_list_03">비노출</label> 
+                                                </div>
+                                            </div><!--라디오체크-->
+                                        </dd>
+                                    </dl>
+                                    <dl class="form-group search_user">
+                                        <dd>
+                                            <span class="input-group">
+                                                <select id="" class="form-control padding_04">
+                                                    <option>제목</option>
+                                                    <option>작성자Seq</option>
+                                                    <option>작성자아이디</option>
+                                                    <option>작성자명</option>  
+                                                    <option>상품코드</option>  
+                                                </select>
+                                                <input type="text" id="" class="form-control">
+                                            </span>
+                                         </dd>
+                                    </dl>
+                                </form>
+                            </div>
+                            <div class="form-group btn-wrapper txt_center m_t_10">
+                                <button type="submit" class="btn btn-primary btn_search">조회하기</button>
+                            </div>
+                            <div class="box-body table-scroll">
+                                <div class="box-body_table">
+                                    <small class="text-muted">[조회결과 154건]</small>
+                                    <div class="table-top-btn">
+                                       <p class="table-top-btn-l">
+                                            <button class="refund_btn_01refund_btn_01">노출</button>
+                                            <button class="refund_btn_02">비노출</button>
+                                        </p>
+                                        <p class="table-top-btn-r">
+                                            <select style="padding:4px 0;">
+                                                <option>30개씩 보기</option>
+                                                <option>50개씩 보기</option>
+                                                <option>100개씩 보기</option>
+                                                <option>300개씩 보기</option>
+                                            </select>
+                                        </p>
+                                    </div>
+                                    <table id="preg-list" class="table dataTable table-hover table-bordered text-center">
+                                        <thead>
+                                        <colgroup>
+                                            <col width="3%">
+                                            <col width="4%">
+                                            <col width="8%">
+                                            <col width="25%">
+                                            <col width="5%">
+                                            <col width="5%">
+                                            <col width="9%">
+                                            <col width="5%">
+                                            <col width="5%">
+                                            <col width="9%">
+                                        </colgroup>
+                                        <tr>
+                                            <th>
+                                                <div class="checks">
+                                                  <input type="checkbox" id="tb_all" name="" class="minimal tb_num">
+                                                  <label for="tb_all" class="m_b_0"></label>  
+                                                </div>
+                                            </th>
+                                            <th>No</th>
+                                            <th>POST분류</th>
+                                            <th>제목</th>
+                                            <th>댓글수</th>
+                                            <th>좋아요</th>
+                                            <th>작성자ID</th>
+                                            <th>국가</th>
+                                            <th>노출상태</th>
+                                            <th>등록일시</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="checks">
+                                                      <input id="tb_chk_01" type="checkbox" name="" class="minimal tr_chk">
+                                                      <label for="tb_chk_01" class="m_b_0"></label>  
+                                                    </div>
+                                                </td>
+                                                <td>26153</td>
+                                                <td>상품후기</td>
+                                                <td class="txt_left content_list">
+                                                    <a href="#" class="table_link_a">게시물 타이틀 게시물 타이틀</a>
+                                                </td>
+                                                <td>25,656</td>
+                                                <td>1,234</td>
+                                                <td><a href="#" class="table_link_a">honggildong@gamil.com</a></td>
+                                                <td>IDN</td>
+                                                <td>노출</td>
+                                                <td>2019-12-01 13:12</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="checks">
+                                                      <input id="tb_chk_01" type="checkbox" name="" class="minimal tr_chk">
+                                                      <label for="tb_chk_01" class="m_b_0"></label>  
+                                                    </div>
+                                                </td>
+                                                <td>26152</td>
+                                                <td>상품후기</td>
+                                                <td class="txt_left">
+                                                    <a href="#" class="table_link_a">게시물 타이틀 게시물 타이틀</a>
+                                                </td>
+                                                <td>25,656</td>
+                                                <td>1,234</td>
+                                                <td><a href="#" class="table_link_a">honggildong@gamil.com</a></td>
+                                                <td>IDN</td>
+                                                <td>노출</td>
+                                                <td>2019-12-01 13:12</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="checks">
+                                                      <input id="tb_chk_01" type="checkbox" name="" class="minimal tr_chk">
+                                                      <label for="tb_chk_01" class="m_b_0"></label>  
+                                                    </div>
+                                                </td>
+                                                <td>26151</td>
+                                                <td>KaySTORY후기</td>
+                                                <td class="txt_left">
+                                                    <a href="#" class="table_link_a">게시물 타이틀 게시물 타이틀</a>
+                                                </td>
+                                                <td>25,656</td>
+                                                <td>1,234</td>
+                                                <td><a href="#" class="table_link_a">honggildong@gamil.com</a></td>
+                                                <td>IDN</td>
+                                                <td>노출</td>
+                                                <td>2019-12-01 13:12</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    
+                                    <div class="txt_center">
+                                        <div class="paging">
+                                            <a href="#">&laquo;</a>
+                                            <a href="#">1</a>
+                                            <a href="#" class="active">2</a>
+                                            <a href="#">3</a>
+                                            <a href="#">4</a>
+                                            <a href="#">5</a>
+                                            <a href="#">6</a>
+                                            <a href="#">&raquo;</a>
+                                        </div>
+                                    </div><!--페이징-->
+                                </div>
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+
+            </section>
+            <!-- /.content -->
+            
+            <!-------------------팝업----------------->
+            <section id="con_pop" class="max-w content-wrapper mobile_popup">
+                <div class="order_popup" style="border:1px solid #000;">
+                    <div class="order_detail">
+                        <p class="order_tit">KBOX POST</p>
+                        <button type="button" class="order_close pop_up_btn">x</button>
+                    </div>
+                    <!--//"order_detail-->
+                    <div class="padding_17">
+                       <div class="goods_review">
+                           <span class="goods_comment">상품후기</span>
+                           <span class="goods_radio">
+                               <div class="input-group">
+                                    <div class="checks small icheck-list table_style">
+                                      <input type="radio" id="post_popup_01" name="post_01" class="minimal"> 
+                                      <label for="post_popup_01">노출</label> 
+                                    </div>
+                                    <div class="checks small icheck-list table_style">
+                                      <input type="radio" id="post_popup_02" name="post_01" class="minimal radio_btn"> 
+                                      <label for="post_popup_02">비노출</label> 
+                                    </div>
+                                </div><!--라디오체크-->
+                           </span>
+                       </div><!--goods_review-->
+                       <table class="table-bordered table_txt_c table_2 w100 popup">
+                            <colgroup>
+                                <col width="5%">
+                                <col width="10%">
+                                <col width="5%">
+                                <col width="10%">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>제목</th>
+                                    <td colspan="3">
+                                        게시물 타이틀 게시물
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>작성자</th>
+                                    <td><a href="#" class="table_link_a">hong@gmail.com</a></td>
+                                    <th>국가</th>
+                                    <td>IDN</td>
+                                </tr>
+                                <tr>
+                                    <th>상품정보</th>
+                                    <td colspan="3">
+                                        <a href="#" class="table_link_a">상품명상품명상품명상품명상품명상품명상품명상품명</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>조회수/좋아요</th>
+                                    <td >2,555 / 1,245</td>
+                                    <th>작성일자</th>
+                                    <td >2019-12-12 16:22</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="m_t_10">
+                            <div class="tab-menu">
+                                <a href="#" class="on">&nbsp;&nbsp;내용&nbsp;&nbsp;</a>
+                                <a href="#">댓글(2,666)</a>
+                            </div>
+                            <div class="tab-con">
+                                <div class="con-1 con">
+                                   <ul class="post_content_img">
+                                       <li><img src="http://placehold.it/160x160/"></li>
+                                       <li><img src="http://placehold.it/160x160/"></li>
+                                       <li><img src="http://placehold.it/160x160/"></li>
+                                       <li><img src="http://placehold.it/160x160/"></li>
+                                       <li><img src="http://placehold.it/160x160/"></li>
+                                       <li><img src="http://placehold.it/160x160/"></li>
+                                       <li><img src="http://placehold.it/160x160/"></li>
+                                       <li><img src="http://placehold.it/160x160/"></li>
+                                       <li><img src="http://placehold.it/160x160/"></li>
+                                       <li><img src="http://placehold.it/160x160/"></li>
+                                   </ul>
+                                   <div>
+                                       ⭐️Kami menginformasikan bahwa petugas kami mungkin sulit merespons cepat setelah jam kerja (7.00~16.00) dan pada hari libur. ⭐️Untuk masalah darurat atau pertanyaan pribadi, silakan kirim email (support@mycreditchain.io) kepada kami dengan informasi akun anda (Alamat email, Nomor ponsel) dan penjelasan masalah anda yang detail
+                                   </div>
+                                </div>
+                                <div class="con-2 con">
+                                    <table id="" class="table dataTable table-hover text-center post_popup_table">
+                                        <thead>
+                                        <colgroup>
+                                            <col width="10%">
+                                            <col width="10%">
+                                            <col width="60%">
+                                            <col width="10%">
+                                            <col width="10%">
+                                        </colgroup>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>작성자</th>
+                                            <th>내용</th>
+                                            <th>등록일시</th>
+                                            <th></th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>1537</td>
+                                            <td>
+                                                <a href="#" class="table_link_a m_selector">honggildong@gmail.com</a>
+                                            </td>
+                                            <td class="txt_left">
+                                                Untuk masalah darurat atau pertanyaan pribadi, silakan kirim email (support@mycreditchain.io) kepada kami dengan informasi akun anda (Alamat email, Nomor ponsel) dan penjelasan masalah anda yang detail.
+                                            </td>
+                                            <td>
+                                                2019-12-12 16:22:35
+                                            </td>
+                                            <td>
+                                                <button class="post_btn">삭제</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1536</td>
+                                            <td>
+                                                <a href="#" class="table_link_a m_selector">hong@gmail.com</a>
+                                            </td>
+                                            <td class="txt_left">
+                                                Untuk masalah darurat atau pertanyaan pribadi, silakan kirim email (support@mycreditchain.io) kepada kami dengan informasi akun anda (Alamat email, Nomor ponsel) dan penjelasan masalah anda yang detail.
+                                            </td>
+                                            <td>
+                                                2019-12-12 16:22:35
+                                            </td>
+                                            <td class="post_del">
+                                                삭제완료
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1535</td>
+                                            <td>
+                                                <a href="#" class="table_link_a m_selector">hong@gmail.com</a>
+                                            </td>
+                                            <td class="txt_left">
+                                                Untuk masalah darurat atau pertanyaan pribadi, silakan kirim email (support@mycreditchain.io) kepada kami dengan informasi akun anda (Alamat email, Nomor ponsel) dan penjelasan masalah anda yang detail.
+                                            </td>
+                                            <td>
+                                                2019-12-12 16:22:35
+                                            </td>
+                                            <td>
+                                                <button class="post_btn">삭제</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1534</td>
+                                            <td>
+                                                <a href="#" class="table_link_a m_selector">honggildong@gmail.com</a>
+                                            </td>
+                                            <td class="txt_left">
+                                                Untuk masalah darurat atau pertanyaan pribadi, silakan kirim email (support@mycreditchain.io) kepada kami dengan informasi akun anda (Alamat email, Nomor ponsel) dan penjelasan masalah anda yang detail.
+                                            </td>
+                                            <td>
+                                                2019-12-12 16:22:35
+                                            </td>
+                                            <td>
+                                                <button class="post_btn">삭제</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1533</td>
+                                            <td>
+                                                <a href="#" class="table_link_a m_selector">honghong@gmail.com</a>
+                                            </td>
+                                            <td class="txt_left">
+                                                Untuk masalah darurat atau pertanyaan pribadi, silakan kirim email (support@mycreditchain.io) kepada kami dengan informasi akun anda (Alamat email, Nomor ponsel) dan penjelasan masalah anda yang detail.
+                                            </td>
+                                            <td>
+                                                2019-12-12 16:22:35
+                                            </td>
+                                            <td>
+                                                <button class="post_btn">삭제</button>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="txt_center">
+                                        <div class="paging">
+                                            <a href="#">&laquo;</a>
+                                            <a href="#">1</a>
+                                            <a href="#" class="active">2</a>
+                                            <a href="#">3</a>
+                                            <a href="#">4</a>
+                                            <a href="#">5</a>
+                                            <a href="#">6</a>
+                                            <a href="#">&raquo;</a>
+                                        </div>
+                                    </div><!--페이징-->
+                                </div>
+                            </div>
+                        </div><!--//tab-wrap-->
+                    </div>
+                    <button type="button" class="black_btn padding_18 pop_up_close pop_up_btn close_popup">닫기</button>
+                </div>
+            </section><!----------------------팝업끝-------------------------------->
+        </div>
+        <!-- /.content-wrapper -->
+    </div>
+    <!-- ./wrapper -->
+
+    <script src="../../AdminLTE/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../../AdminLTE/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../../AdminLTE/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../../AdminLTE/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <script src="../../AdminLTE/bower_components/select2/dist/js/select2.full.min.js"></script>
+    <script src="../../AdminLTE/bower_components/moment/min/moment.min.js"></script>
+    <script src="../../AdminLTE/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script src="../../AdminLTE/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+    <script src="../../AdminLTE/bower_components/fastclick/lib/fastclick.js"></script>
+    <script src="../../AdminLTE/dist/js/adminlte.min.js"></script>
+    <script src="../../AdminLTE/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+    <script src="../../AdminLTE/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+    <script src="../../AdminLTE/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="../../AdminLTE/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="../../AdminLTE/plugins/iCheck/icheck.min.js"></script>
+    <script src="../../AdminLTE/bower_components/chart.js/Chart.js"></script>
+    <script src="../resources/js/ui-commons.js"></script>
+</body>
+</html>
