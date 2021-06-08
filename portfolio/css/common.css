@@ -45,23 +45,23 @@ em{font-style:normal;}
       }
 /*sec-1*/
 #sec-1{position:relative;}
-#sec-1 .pic{height:650px; background:url(../images/myphoto-5.jpg) no-repeat center 110px; background-size:55%; position:relative; margin-top:50px; box-sizing:border-box;}
+#sec-1 .pic{height:710px; background:url(../images/myphoto-5.jpg) no-repeat center 110px; background-size:55%; position:relative; margin-top:50px; box-sizing:border-box;}
 #sec-1 .pic h2{text-align:center; color:#696969; line-height:1.5em; font-size:35px;}
 #sec-1 .pic h2 strong{font-size:40px; color:#f8a32f;}
-#sec-1 .about{background-color:#fdaf43; width: 100%; height:180px; position: absolute; left: 0; top: 580px; z-index:-1;}
+#sec-1 .about{background-color:#fdaf43; width: 100%; height:220px; position: absolute; left: 0; top: 580px; z-index:-1;}
 #sec-1 .profile, #sec-1 .career, #sec-1 .license, #sec-1 .edu{color:#ffffff; z-index:3; }
 #sec-1 .profile{position:absolute; left:33%; top:5%;}
 #sec-1 .profile dl dt{display:inline-block; text-align:center; padding-right:10px; font-size:18px;}
 #sec-1 .profile dl dd{display:inline-block; text-align:center; margin-right:62px;} 
 #sec-1 .career_p, #sec-1 .license_p{font-size:18px;}
-#sec-1 .career{position:absolute; left:18%; top:70px;}
+#sec-1 .career{position:absolute; left:18%; top:80px;}
 #sec-1 .career .data{padding-right:10px;}
-#sec-1 .license{position:absolute; right:39%; top:70px;}
-#sec-1 .edu{position:absolute; right:18%; top:70px;}
+#sec-1 .license{position:absolute; right:39%; top:80px;}
+#sec-1 .edu{position:absolute; right:18%; top:80px;}
 
-.skill-wrap{overflow:hidden; padding-top:110px;}
+.skill-wrap{/*overflow:hidden; */padding-top:110px; height: 360px;}
 .skill-wrap .skill-profil{text-align:center;}
-.skill-wrap .skill-profil .skill-p{float:left; width:33.3%; margin-top:30px;}
+.skill-wrap .skill-profil .skill-p{float:left; width:33.3%; margin-top:40px;}
 
 .skill-wrap .skill-t{font-size:30px; color:#f8a32f; padding:10px 0 25px;}
 .skill-wrap .skill{float:left; width:23%; margin-right:2%;}
@@ -70,7 +70,7 @@ em{font-style:normal;}
 
 .skill .skill-tit{height:32px; background-repeat:no-repeat; padding:0 0 5px 35px; line-height:32px; font-size:14px; }
 #skill-1 .skill-tit{background-image:url(../images/photoshop.png); }
-#skill-2 .skill-tit{background-image:url(../images/illustrator.png); }
+#skill-2 .skill-tit{background-image:url(../images/monitor.png); }
 #skill-3 .skill-tit{background-image:url(../images/browser.png); }
 #skill-4 .skill-tit{background-image:url(../images/monitor.png); }
 
@@ -90,7 +90,10 @@ em{font-style:normal;}
 #work-item-lst li .thumb img{width:100%;}
 #work-item-lst .desc{position:absolute; left:-900px; top:0; width:100%; height:98%; background-color:rgba(234, 151, 39, 0.7);}
 #work-item-lst .desc .desc-txt{position:absolute; left:30%; top:40%; color:#fff; text-align:left;}
-#work-item-lst li:nth-child(3) .desc .desc-txt, #work-item-lst li:nth-child(6) .desc .desc-txt{left:18%;}
+#work-item-lst li:nth-child(3) .desc .desc-txt{left:28%;}
+#work-item-lst li:nth-child(6) .desc .desc-txt{left:28%;}
+#work-item-lst li:nth-child(5) .desc .desc-txt, #work-item-lst li:nth-child(8) .desc .desc-txt{left:18%;}
+#work-item-lst li .desc .kbox{left:18%;}
 
 
 #work-item-lst .tom-img{margin-left:220px;}
